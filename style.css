@@ -1,0 +1,595 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+    list-style-type: none;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+}
+
+.Header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(211, 211, 211);
+}
+
+.SocialMedia img{
+    width: 30px;
+    height: 30px;
+    
+}
+.SocialMedia{
+    display: flex;
+    width: 30vw;
+    column-gap: 5vw;
+}
+
+.ContactHeader{
+   width: 50vw; 
+}
+
+.ContactHeaderPhone p, .ContactHeaderMail p{
+    font-size: smaller;
+}
+
+
+.ContactHeader, .ContactHeaderPhone, .ContactHeaderMail{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.ContactHeaderMail img, .ContactHeaderPhone img{
+    width: 30px;
+    height:30px;
+}
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px black;
+    background-color: white;
+    width: 100vw;
+}
+
+.Logo img{
+    width: 35vw;
+    height: 11vh;
+    margin-left: 5px;
+}
+
+
+.NavUl li{
+    position: relative;
+    right: -2vw;
+    padding: 10px 30px 10px 30px;
+    left: 5vw;
+    display: inline-block;
+}
+
+.Hamburger{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    row-gap: 2px;
+    left: 90vw;
+    cursor: pointer;
+}
+
+.Hamburger:hover{
+    padding: 5px;
+}
+.Hamburger span{
+    padding: 2px 15px;
+    background-color: #e06767;
+    
+}
+
+
+
+.NavItems:hover{
+    border-bottom: 5px solid #e06767;
+    transition: 200ms;
+    
+}
+
+.NavItems a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 880px) {
+    .Hamburger{
+        display: flex;
+    }
+    .SocialMedia img, .ContactHeaderMail img, .ContactHeaderPhone img{
+        width: 15px;
+        height:15px;
+    }
+    .ContactHeader{
+        width: 70vw;
+        justify-content: space-between;
+    }
+
+   .NavUl{
+        display: none;
+        flex-direction: column;
+        row-gap: 1vw;
+        position: absolute;
+        width: 100vw;
+        right: 0vw;
+        padding-left: 0;
+        background-color: black;
+        text-align: center; 
+        transform: translateX(105vw);
+    }
+
+    .NavItems a{
+        text-decoration: none;
+        color: black;
+    }
+
+    @keyframes sildeIn {
+        100%{
+            transform: translateX(0vw)
+        }
+        
+    }
+
+
+    .NavUl li{
+        position: relative;
+        color: black;
+        left: 0;
+        
+    }
+    .NavUl li:hover{
+        border-style: none;
+        background-color: antiquewhite;
+        
+    }
+    .active{
+        display: flex;
+        /*transition: 1s;*/
+        animation: sildeIn 500ms linear forwards
+        
+    }
+
+}
+
+
+/*.header2 ul li .isactive{
+    background-color: aliceblue;
+    box-shadow: 0 0 2px 0;
+    transition: 200ms;
+    
+}*/
+
+.headerSlides{
+
+    width: 100vw;
+    height: 65vh;
+    animation: changingBg 15s infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes changingBg{
+    0%, 100%{background-image: url('Images/DentalPoster1.jpg');}
+
+    25%{background-image: url('Images/DentalPoster2.jpg');}
+
+    50%{background-image: url('Images/DentalPoster3.jpg');}
+
+    75%{
+        background-image: url('Images/DentalPoster4.jpg');
+    }
+}
+
+.mainContent{
+    /*padding: 10px 75px 0 75px;*/
+}
+.section1 {
+    animation: SlideUp 500ms linear forwards;
+    background-image: url('Images/Purple.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    width: 100vw;
+    justify-items: center;
+    padding: 20px 100px 70px 100px;
+    transform: translateY(100px);
+    
+    
+}
+
+@keyframes SlideUp {
+
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+.section1Heading{
+    position: relative;
+    text-align: center;
+    font-size: xx-large;
+    padding: 2px;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    
+}
+.section1 img{
+    position: relative;
+    top: 10px;
+    width: 50px;
+    height:50px
+
+}
+
+.section1 p{
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.Slogan{
+    padding: 40px;
+    font-size: xx-large;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(224, 103, 103, 0.5), rgb(224, 103, 103, 0.8), rgb(205, 137, 154, 0.5));
+    text-align: center;
+}
+
+.SectionHeading{
+    font-size: 4em;
+    font-weight: bold;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    text-decoration:underline;
+}
+
+.Section-One{
+    display: flex;
+    padding: 5vw;
+}
+
+.SectionOneContentIntro{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+.SectionOneContentIntro img{
+    border-radius: 50%;
+    height: 55vh;
+}
+.SectionOneContentIntro p{
+    font-family: 'Signika', sans-serif;
+}
+
+.SectionOneContentIntro p span{
+    font-size:xx-large;
+    font-weight: bolder;
+}
+
+.SpecializationOne{
+    width: 150px;
+    height: 100px;
+    background-color: #e06767;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+    margin: 0
+}
+
+.SectionOneContentSpecialization{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    place-items: center;
+    column-gap: 0px;
+}
+
+.SpecializationOne p{
+    padding: 10px;
+}
+
+
+
+.SpecializationOne:nth-of-type(1):hover{
+    background-image: url('Images/Braces.png');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+
+.SpecializationOne:nth-of-type(2):hover{
+    background-image: url('Images/crown.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationOne:nth-of-type(3):hover{
+    background-image: url('Images/toothFilling.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationOne:nth-of-type(4):hover{
+    background-image: url('Images/gumTherapy.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationOne:nth-of-type(5):hover{
+    background-image: url('Images/esthetic.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationOne:nth-of-type(6):hover{
+    background-image: url('Images/enhancement.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.Section-Two{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5vw;
+}
+
+.SectionTwoContentIntro{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100vw;
+}
+.SectionTwoContentIntro img{
+    border-radius: 50%;
+    height: 55vh;
+}
+.SectionTwoContentIntro p{
+    font-family: 'Signika', sans-serif;
+}
+
+.SectionTwoContentIntro p span{
+    font-size:xx-large;
+    font-weight: bolder;
+}
+
+.SpecializationTwo{
+    width: 150px;
+    height: 100px;
+    background-color: #e06767;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+    margin: 0
+}
+
+.SectionTwoContentSpecialization{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    place-items: center;
+    column-gap: 0px;
+}
+
+.SpecializationTwo p{
+    padding: 10px;
+}
+
+.SpecializationTwo:nth-of-type(1):hover{
+    background-image: url('Images/genralSurgery.png');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+
+.SpecializationTwo:nth-of-type(2):hover{
+    background-image: url('Images/LaparoscopicSurgery.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(3):hover{
+    background-image: url('Images/GallBladder.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(4):hover{
+    background-image: url('Images/hemorrhoid.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(5):hover{
+    background-image: url('Images/hernia.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(6):hover{
+    background-image: url('Images/PilesSurgery.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}  
+
+.SpecializationTwo:nth-of-type(7):hover{
+    background-image: url('Images/fissure.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(8):hover{
+    background-image: url('Images/Hysterectomy.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(9):hover{
+    background-image: url('Images/gallStones.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.SpecializationTwo:nth-of-type(10):hover{
+    background-image: url('Images/Appendectomy.jpg');
+    background-size:180px 120px;
+    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+
+}
+
+.placeImage{
+    margin-top: 40px;
+   text-align: center;
+}
+
+.placeImageContent img{
+    width: 100vw;
+    height: 400px;
+}
+
+
+
+.OpeningHours{
+    text-align: start;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.OpeningHours tbody tr td{
+    font-size: 1.5em;
+    padding: 10px;
+
+}
+
+.OpeningHours thead th{
+    text-decoration: underline;
+}
+
+.vistingDoctorIntro{
+    text-align: center;
+    margin: 0 auto;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100vw;
+    padding: 10px 40px 10px 40px;
+}
+
+.vistingDoctorIntro img{
+    width: 20vw;
+    height: 40vh;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.vistingDoctorIntro h2{
+    font-size:3em;
+    text-decoration: underline;
+}
+
+.vistingDoctorIntro p{
+    font-size: x-large;
+}
+
+.contactDetail{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(212, 212, 212, 0.5);
+}
+.contactDetailContent{
+}
+
+ .address p a{
+    text-decoration: none;
+    color: black;
+}
+.address p a:hover{
+    background-color: black;
+    cursor:grab;
+    color: white;
+
+}
+.phoneNumber{
+    margin-bottom: 20px;
+}
+.phoneNumber p a{
+    text-decoration: none;
+    color: black;
+}
+
+.contactDetailContent .locationDetails iframe{
+    width: 700px;
+}
+
+.socialMedia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
+    row-gap: 5vh;
+}
+
+.footer .socialMedia a img{
+    width: 3vw;
+    height: 5vh;
+}
+
+.copyrights{
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
