@@ -586,8 +586,13 @@ body{
     color: black;
 }
 
-.contactDetailContent .locationDetails iframe{
+.contactDetailContent {
     width: 100vw;
+    position: relative;
+}
+
+.locationDetails iframe{
+    width: 95vw;
     position: relative;
 }
 
